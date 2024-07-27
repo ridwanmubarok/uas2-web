@@ -47,10 +47,12 @@
         </div>
       </div>
 
-      <main class="pl-20 pr-5 py-8 w-screen z-0 h-screen bg-[#F7F7F7]">
+      <main
+        class="pl-20 pr-5 py-8 w-screen font-thin z-0 h-screen bg-[#F7F7F7]"
+      >
         <div class="flex flex-col gap-5">
           <header class="col-span-12">
-            <h1 class="text-2xl font-thin">Petani Cerdas</h1>
+            <a href="index.html" class="text-2xl font-thin">Petani Cerdas</a>
           </header>
           <div class="grid grid-cols-12 gap-5">
             <div class="col-span-12 lg:col-span-8 flex flex-col gap-5">
@@ -79,12 +81,10 @@
                 <a
                   href="https://open.spotify.com/show/2KaGpdihZYFjDsSAYZrd1G"
                   target="_blank"
-                  class="flex items-center bg-white p-3 rounded-lg font-bold justify-center gap-3 hover:bg-green-500 group hover:text-white transition-all"
+                  class="flex items-center bg-white p-3 rounded-lg font-bold justify-center gap-3 hover:bg-green-50 group transition-all"
                 >
                   Buka di spotify
-                  <i
-                    class="group-hover:text-white ri-spotify-line text-green-500 text-2xl"
-                  ></i>
+                  <i class="ri-spotify-line text-green-500 text-2xl"></i>
                 </a>
               </div>
 
@@ -230,7 +230,8 @@
                   <h3 class="text-lg font-bold">Wiki</h3>
                 </div>
                 <div class="grid grid-cols-1">
-                  <div
+                  <a
+                    href="wiki.html#padi"
                     class="flex border-b justify-between items-center gap-3 p-3"
                   >
                     <div class="flex gap-3">
@@ -245,9 +246,10 @@
                     <div class="flex items-center justify-end">
                       <i class="ri-arrow-right-s-line text-2xl"></i>
                     </div>
-                  </div>
+                  </a>
 
-                  <div
+                  <a
+                    href="wiki.html#cabai"
                     class="flex border-b justify-between items-center gap-3 p-3"
                   >
                     <div class="flex gap-3">
@@ -262,16 +264,17 @@
                     <div class="flex items-center justify-end">
                       <i class="ri-arrow-right-s-line text-2xl"></i>
                     </div>
-                  </div>
+                  </a>
 
-                  <div
+                  <a
+                    href="wiki.html#kopi"
                     class="flex border-b justify-between items-center gap-3 p-3"
                   >
                     <div class="flex gap-3">
                       <div class="flex flex-col">
-                        <h3 class="text-lg font-bold">Kopi</h3>
+                        <h3 class="text-lg font-bold">Jagung</h3>
                         <h5 class="text-sm font-[500]">
-                          Kopi adalah salah satu tanaman yang paling penting
+                          Jagung adalah salah satu tanaman yang paling penting
                           untuk kehidupan manusia.
                         </h5>
                       </div>
@@ -279,7 +282,7 @@
                     <div class="flex items-center justify-end">
                       <i class="ri-arrow-right-s-line text-2xl"></i>
                     </div>
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -297,5 +300,6 @@
     </div>
 
     <script type="module" src="main.js"></script>
+    <script type="module" src="index.js"></script>
   </body>
 </html>

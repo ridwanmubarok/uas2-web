@@ -1,41 +1,148 @@
 <!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Petani Cerdas</title>
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
-
+  <body>
     <div class="flex">
-        <!-- Sidebar -->
-        <div class="bg-[#F7F7F7] h-screen">
-            <div class="fixed z-50 bg-white shadow-lg w-[60px] gap-5 h-full  flex flex-col justify-center items-center">
-                <a href="wiki.html" class="w-[48px] bg-green-500 text-white rounded-full flex items-center justify-center h-[48px]">
-                    <i class="ri-leaf-line text-2xl"></i>
-                </a>
-                <a href="index.html" class="w-[48px] rounded-full flex items-center justify-center h-[48px]">
-                    <i class="ri-home-line text-2xl"></i>
-                </a>
-                <a href="video.html" class="w-[48px] rounded-full flex items-center justify-center h-[48px]">
-                    <i class="ri-video-line text-2xl"></i>
-                </a>
-                <a href="podcast.html" class="w-[48px] rounded-full flex items-center justify-center h-[48px]">
-                    <i class="ri-mic-line text-2xl"></i>
-                </a>
-            </div>
+      <!-- Sidebar -->
+      <div class="bg-[#F7F7F7] h-screen">
+        <div
+          class="fixed z-50 bg-white shadow-lg w-[60px] gap-5 h-full flex flex-col justify-center items-center"
+        >
+          <a
+            href="wiki.html"
+            class="w-[48px] bg-green-500 text-white rounded-full flex items-center justify-center h-[48px]"
+          >
+            <i class="ri-leaf-line text-2xl"></i>
+          </a>
+          <a
+            href="index.html"
+            class="w-[48px] rounded-full flex items-center justify-center h-[48px]"
+          >
+            <i class="ri-home-line text-2xl"></i>
+          </a>
+          <a
+            href="video.html"
+            class="w-[48px] rounded-full flex items-center justify-center h-[48px]"
+          >
+            <i class="ri-video-line text-2xl"></i>
+          </a>
+          <a
+            href="podcast.html"
+            class="w-[48px] rounded-full flex items-center justify-center h-[48px]"
+          >
+            <i class="ri-mic-line text-2xl"></i>
+          </a>
         </div>
-        <!-- Content -->
+      </div>
+
+      <main
+        class="pl-20 font-thin pr-5 py-8 gap-5 w-screen bg-[#F7F7F7] z-0 h-screen"
+      >
+        <header class="col-span-12 mb-5">
+          <a href="index.html" class="text-2xl font-thin">Petani Cerdas</a>
+        </header>
+        <div class="flex flex-col gap-5">
+          <div>
+            <h3 class="text-lg font-bold">WIKITANI</h3>
+            <p class="text-sm text-gray-500">
+              Kumpulan informasi tani yang bermanfaat untuk petani Indonesia
+            </p>
+          </div>
+
+          <div class="flex flex-col gap-3 bg-white p-5 rounded-lg shadow-sm">
+            <div class="flex flex-col gap-3 bg-white p-5 rounded-lg shadow-sm">
+              <h3 class="text-lg font-bold">Segala Informasi Tani</h3>
+              <p class="text-sm text-gray-500">
+                Dapatkan informasi tani terbaru dan terlengkap di sini.
+              </p>
+            </div>
+
+            <div class="flex flex-col gap-3 bg-white p-5 rounded-lg shadow-sm">
+              <div
+                x-data="{ open: false }"
+                id="cabai-section"
+                x-init="if (window.location.hash === '#cabai') open = true"
+              >
+                <button
+                  @click="open = !open"
+                  class="flex justify-between w-full text-left font-semibold py-2"
+                >
+                  <span class="text-md">Cabai</span>
+                  <i
+                    class="ri-arrow-down-s-line"
+                    :class="{ 'rotate-180': open }"
+                  ></i>
+                </button>
+                <div x-show="open" class="mt-2 text-sm text-gray-500">
+                  <p id="cabai-content"></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-3 bg-white p-5 rounded-lg shadow-sm">
+              <div
+                x-data="{ open: false }"
+                id="padi-section"
+                x-init="if (window.location.hash === '#padi') open = true"
+              >
+                <button
+                  @click="open = !open"
+                  class="flex justify-between w-full text-left font-semibold py-2"
+                >
+                  <span class="text-md">Padi</span>
+                  <i
+                    class="ri-arrow-down-s-line"
+                    :class="{ 'rotate-180': open }"
+                  ></i>
+                </button>
+                <div x-show="open" class="mt-2 text-sm text-gray-500">
+                  <p id="padi-content"></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-3 bg-white p-5 rounded-lg shadow-sm">
+              <div
+                x-data="{ open: false }"
+                id="jagung-section"
+                x-init="if (window.location.hash === '#jagung') open = true"
+              >
+                <button
+                  @click="open = !open"
+                  class="flex justify-between w-full text-left font-semibold py-2"
+                >
+                  <span class="text-md">Jagung</span>
+                  <i
+                    class="ri-arrow-down-s-line"
+                    :class="{ 'rotate-180': open }"
+                  ></i>
+                </button>
+                <div x-show="open" class="prose mt-2 text-sm text-gray-500">
+                  <p id="jagung-content"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- Content -->
     </div>
 
     <script type="module" src="main.js"></script>
-</body>
-
+    <script type="module" src="wiki.js"></script>
+  </body>
 </html>
