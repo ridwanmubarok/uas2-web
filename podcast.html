@@ -1,41 +1,200 @@
 <!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Petani Cerdas</title>
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
-
+  <body>
     <div class="flex">
-        <!-- Sidebar -->
-        <div class="bg-[#F7F7F7] h-screen">
-            <div class="fixed z-50 bg-white shadow-lg w-[60px] gap-5 h-full  flex flex-col justify-center items-center">
-                <a href="wiki.html" class="w-[48px] rounded-full flex items-center justify-center h-[48px]">
-                    <i class="ri-leaf-line text-2xl"></i>
-                </a>
-                <a href="index.html" class="w-[48px] rounded-full flex items-center justify-center h-[48px]">
-                    <i class="ri-home-line text-2xl"></i>
-                </a>
-                <a href="video.html" class="w-[48px] rounded-full flex items-center justify-center h-[48px]">
-                    <i class="ri-video-line text-2xl"></i>
-                </a>
-                <a href="podcast.html" class="w-[48px] bg-green-500 text-white rounded-full flex items-center justify-center h-[48px]">
-                    <i class="ri-mic-line text-2xl"></i>
-                </a>
-            </div>
+      <!-- Sidebar -->
+      <div class="bg-[#F7F7F7] h-screen">
+        <div
+          class="fixed z-50 bg-white shadow-lg w-[60px] gap-5 h-full flex flex-col justify-center items-center"
+        >
+          <a
+            href="wiki.html"
+            class="w-[48px] rounded-full flex items-center justify-center h-[48px]"
+          >
+            <i class="ri-leaf-line text-2xl"></i>
+          </a>
+          <a
+            href="index.html"
+            class="w-[48px] rounded-full flex items-center justify-center h-[48px]"
+          >
+            <i class="ri-home-line text-2xl"></i>
+          </a>
+          <a
+            href="video.html"
+            class="w-[48px] rounded-full flex items-center justify-center h-[48px]"
+          >
+            <i class="ri-video-line text-2xl"></i>
+          </a>
+          <a
+            href="podcast.html"
+            class="w-[48px] bg-green-500 text-white rounded-full flex items-center justify-center h-[48px]"
+          >
+            <i class="ri-mic-line text-2xl"></i>
+          </a>
         </div>
-        <!-- Content -->
+      </div>
+
+      <main
+        class="pl-20 pr-5 py-8 w-screen font-thin z-0 h-screen bg-[#F7F7F7]"
+      >
+        <div class="flex flex-col gap-5">
+          <header class="col-span-12">
+            <a href="index.html" class="text-2xl font-thin">Petani Cerdas</a>
+          </header>
+
+          <div class="flex flex-col gap-5 min-h-[800px]">
+            <div>
+              <h3 class="text-lg font-bold">PODCAST</h3>
+              <p class="text-sm text-gray-500">
+                Menjelajahi Inovasi dan Wawasan dalam Pertanian
+              </p>
+            </div>
+
+            <div class="flex flex-col gap-3 bg-white p-5 rounded-lg shadow-sm">
+              <div
+                class="flex flex-col gap-3 bg-white p-5 rounded-lg shadow-sm"
+              >
+                <div class="bg-white shadow-sm rounded-lg">
+                  <div class="flex gap-3 items-center p-3">
+                    <i class="ri-mic-line text-green-500 text-2xl"></i>
+                    <h3 class="text-lg font-bold">Podcast</h3>
+                  </div>
+                  <div class="grid grid-cols-1">
+                    <div
+                      class="flex border-b justify-between items-center gap-3 p-3"
+                    >
+                      <div class="flex gap-3">
+                        <div class="w-[52px] h-[52px]">
+                          <img
+                            src="https://img.freepik.com/premium-vector/podcast-flat-icon_180786-8.jpg"
+                            alt="gambar"
+                            class="border rounded-full"
+                          />
+                        </div>
+                        <div class="flex flex-col">
+                          <h3 class="text-lg font-bold">Pertanian</h3>
+                          <h5 class="text-sm font-[500]">
+                            Anak Muda Tertarik Pertanian, Tekuni Kultur Jaringan
+                            - Energi Disway Podcast - Dahlan Iskan
+                          </h5>
+                        </div>
+                      </div>
+                      <div class="flex items-center justify-end">
+                        <i
+                          class="ri-play-circle-line text-2xl play"
+                          id="play"
+                        ></i>
+                        <audio
+                          class="audio"
+                          src="src/assets/audio/pweb.mp3"
+                          id="audio"
+                        >
+                          Your browser does not support the audio element.
+                        </audio>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid grid-cols-1">
+                    <div
+                      class="flex border-b justify-between items-center gap-3 p-3"
+                    >
+                      <div class="flex gap-3">
+                        <div class="w-[52px] h-[52px]">
+                          <img
+                            src="https://img.freepik.com/premium-vector/podcast-flat-icon_180786-8.jpg"
+                            alt="gambar"
+                            class="border rounded-full"
+                          />
+                        </div>
+                        <div class="flex flex-col">
+                          <h3 class="text-lg font-bold">Pertanian</h3>
+                          <h5 class="text-sm font-[500]">
+                            Tantangan Sektor Pertanian Indonesia
+                          </h5>
+                        </div>
+                      </div>
+                      <div class="flex items-center justify-end">
+                        <i
+                          class="ri-play-circle-line text-2xl play"
+                          id="play"
+                        ></i>
+                        <audio
+                          class="audio"
+                          src="src/assets/audio/pweb.mp3"
+                          id="audio"
+                        >
+                          Your browser does not support the audio element.
+                        </audio>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid grid-cols-1">
+                    <div
+                      class="flex border-b justify-between items-center gap-3 p-3"
+                    >
+                      <div class="flex gap-3">
+                        <div class="w-[52px] h-[52px]">
+                          <img
+                            src="https://img.freepik.com/premium-vector/podcast-flat-icon_180786-8.jpg"
+                            alt="gambar"
+                            class="border rounded-full"
+                          />
+                        </div>
+                        <div class="flex flex-col">
+                          <h3 class="text-lg font-bold">Pertanian</h3>
+                          <h5 class="text-sm font-[500]">
+                            Amran Sulaiman, Bicara Soal Basmi TIkus Hingga Basmi
+                            Mafia Pertanian
+                          </h5>
+                        </div>
+                      </div>
+                      <div class="flex items-center justify-end">
+                        <i
+                          class="ri-play-circle-line text-2xl play"
+                          id="play"
+                        ></i>
+                        <audio
+                          class="audio"
+                          src="src/assets/audio/pweb.mp3"
+                          id="audio"
+                        >
+                          Your browser does not support the audio element.
+                        </audio>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="w-full m-4">
+          <div class="flex justify-center items-center p-5">
+            <h3 class="text-sm font-bold">
+              Copyright © 2024 Akmal Fauzi - Ridwan Mubarok
+            </h3>
+          </div>
+        </footer>
+      </main>
     </div>
 
     <script type="module" src="main.js"></script>
-</body>
-
+    <script type="module" src="podcast.js"></script>
+  </body>
 </html>
